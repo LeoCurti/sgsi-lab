@@ -1,8 +1,14 @@
 # SGSI Lab - Monitoramento e Resposta a Incidentes
 
-Projeto prático de implementação de um Sistema de Gestão de Segurança da Informação (SGSI) em ambiente Linux, com foco em detecção e resposta a eventos suspeitos de conexão SSH.
-
+Projeto prático de segurança da informação simulando um ambiente real exposto à internet, com implementação de controles de hardening, monitoramento e resposta automatizada a incidentes.
 ---
+## Destaques
+
+- Detecção de eventos suspeitos via `journalctl`
+- Resposta automática com `Fail2ban`
+- Hardening completo de SSH
+- Script de análise de eventos em tempo real
+- Playbook estruturado de resposta a incidentes
 
 ## Inventário
 
@@ -46,27 +52,12 @@ Monitoramento baseado em análise de logs do systemd (`journalctl`), identifican
 
 ---
 
-## Exemplo de detecção real
---------------------------------------------------
-   Relatório de Bloqueios Fail2Ban
---------------------------------------------------
+## Resultado real
 
-[+] Jails ativas no sistema:
-	apache-auth, sshd
+Durante testes controlados, foi possível identificar e bloquear automaticamente um IP com comportamento suspeito:
 
-[+] IPs bloqueados atualmente:
-	56.125.231.148
+<img width="481" height="488" alt="image" src="https://github.com/user-attachments/assets/59fe9e69-daf4-4b85-83d6-cf34f9552e22" />
 
-[+] Histórico de Bans:
-      2 56.125.231.148
-
-[+] Últimos 5 bloqueios registrados no log:
-2026-04-28 13:52:44,790 -> 56.125.231.148
-
-[+] Eventos suspeitos SSH (últimos 5 minutos):
-      9 56.125.231.148
-
---------------------------------------------------
 
 ## Playbook
 
